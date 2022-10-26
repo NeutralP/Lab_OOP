@@ -1,5 +1,7 @@
 package week1;
-
+/*
+    Exercise 2.2.6 Part 1
+ */
 
 import javax.swing.*;
 
