@@ -1,4 +1,4 @@
-package week1;
+package Lab01;
 /*
     Exercise 2.2.6 part 3
  */

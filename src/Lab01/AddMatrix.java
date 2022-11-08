@@ -1,4 +1,4 @@
-package week1;
+package Lab01;
 
 public class AddMatrix {
     public static void main(String[] args) {

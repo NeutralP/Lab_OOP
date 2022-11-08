@@ -1,4 +1,4 @@
-package week1;
+package Lab01;
 /*
     Exercise 6.5
     Array is a constant
