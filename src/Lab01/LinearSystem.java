@@ -52,4 +52,5 @@ public class LinearSystem {
             JOptionPane.showMessageDialog(null, "Equation: \n" + equation1 + equation2 + "Has solution as follows: x: " + String.format("%.2f", x) + ", y: " + String.format("%.2f", y));
         }
     }
+
 }
