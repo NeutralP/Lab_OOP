@@ -13,6 +13,11 @@ public class Cart {
         this.qtyOrdered = qtyOrdered;
     }
 
+    /**
+     * If the cart is not full, add the disc to the cart and print a message. If the cart is full, print a message
+     *
+     * @param disc The disc to be added to the cart
+     */
     public void addDigitalVideoDisc (DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBER_ORDERED) {
             itemsOrdered[qtyOrdered++] = disc;
@@ -22,6 +27,13 @@ public class Cart {
         else System.out.println("The cart is full");
     }
 
+    /**
+     * If the order is not empty, then for each item in the order, if the title of the item is the same as the title of the
+     * disc to be removed, then for each item after the item to be removed, set the item to the item after it, and then
+     * decrement the quantity of items ordered and set the last item to null
+     *
+     * @param disc The disc to be removed.
+     */
     public void removeDigitalVideoDisc (DigitalVideoDisc disc) {
         if (getQtyOrdered() == 0) System.out.println("The order is empty, there are no disks to be removed");
         else {
@@ -40,6 +52,11 @@ public class Cart {
         }
     }
 
+    /**
+     * This function returns the total cost of the order.
+     *
+     * @return The total cost of the items in the order.
+     */
     public float cost() {
         float totalCost = 0;
         for (int i = 0; i < getQtyOrdered(); i++) {
@@ -47,17 +64,18 @@ public class Cart {
         }
         return totalCost;
     }
-    public Cart() {
-    }
 
-    public void displayCart() {
+    /**
+     * This function prints out the items in the cart, the total cost of the items in the cart, and the total number of
+     * items in the cart
+     */
+    public void print() {
         System.out.println("/////////////");
-        System.out.println("Cart display");
+        System.out.println("Ordered Items:");
         for (int i = 0; i < getQtyOrdered(); i++) {
-            System.out.printf((i+1) + ". " + itemsOrdered[i].getTitle() + "\n");
-            System.out.printf("Director: " + itemsOrdered[i].getDirector() + "\n");
-            System.out.printf("Cost: " + itemsOrdered[i].getLength() + "\n");
+            System.out.printf(itemsOrdered[i].toString());
         }
+        System.out.printf("\nTotal cost: " + cost());
         System.out.println();
         System.out.println("/////////////");
     }
