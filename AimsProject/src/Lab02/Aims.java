@@ -20,6 +20,6 @@ public class Aims {
 //        anOrder.displayCart();
 
 //        anOrder.removeDigitalVideoDisc(dvd1);
-//        anOrder.displayCart();
+        anOrder.print();
     }
 }
