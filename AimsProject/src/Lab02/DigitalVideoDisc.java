@@ -75,8 +75,4 @@ public class DigitalVideoDisc {
     public DigitalVideoDisc(String title) {
         this.title = title;
     }
-
-    public DigitalVideoDisc(String title) {
-        this.title = title;
-    }
 }

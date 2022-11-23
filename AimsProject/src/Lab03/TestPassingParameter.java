@@ -5,7 +5,7 @@ import Lab02.DigitalVideoDisc;
 public class TestPassingParameter {
     public static void main(String[] args) {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
-        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderalla");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
         swap(jungleDVD, cinderellaDVD);
         System.out.println("jungle DVD title: " + jungleDVD.getTitle());
