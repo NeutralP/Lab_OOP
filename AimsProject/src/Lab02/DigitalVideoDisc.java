@@ -75,4 +75,20 @@ public class DigitalVideoDisc {
     public DigitalVideoDisc(String title) {
         this.title = title;
     }
+
+    /**
+     * If the title of the book is the same as the title passed in, return true, otherwise return false.
+     *
+     * @param title The title of the book
+     * @return A boolean value.
+     */
+    public boolean isMatch(String title) {
+        if(title.compareToIgnoreCase(this.title) == 0)
+            return true;
+        return false;
+    }
+
+    public boolean isMatchid(int id) {
+        return id == this.id;
+    }
 }
