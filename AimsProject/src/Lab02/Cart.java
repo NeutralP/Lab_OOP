@@ -79,4 +79,32 @@ public class Cart {
         System.out.println();
         System.out.println("/////////////");
     }
+
+    /**
+     * This function searches through the array of itemsOrdered and returns true if the string passed in matches any of the
+     * itemsOrdered
+     *
+     * @param string The string to search for.
+     * @return The boolean value of the search.
+     */
+    public boolean SearchByString(String string) {
+        for (int i = 0; i < getQtyOrdered(); i++) {
+            if(itemsOrdered[i].isMatch(string))
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * > This function searches the array of itemsOrdered for an item with a matching id
+     *
+     * @param id The id of the item to be searched for
+     * @return A boolean value.
+     */
+    public boolean SearchByID(int id) {
+        for (int i = 0; i < getQtyOrdered(); i++) {
+            if (itemsOrdered[i].isMatchid(id)) return true;
+        }
+        return false;
+    }
 }
