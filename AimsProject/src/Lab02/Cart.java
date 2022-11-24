@@ -40,10 +40,10 @@ public class Cart {
             for (int i = 0; i < getQtyOrdered(); i++) {
                 if (itemsOrdered[i].getTitle().compareToIgnoreCase(disc.getTitle()) == 0) { // Compare 2 titles.
                     {
-                        for(int j=i; j<getQtyOrdered()-1; j++)
+                        for(int j=i; j<qtyOrdered-1; j++)
                             itemsOrdered[j] = itemsOrdered[j+1];
-                        setQtyOrdered(getQtyOrdered() - 1);
-                        itemsOrdered[getQtyOrdered()] = null;
+                        itemsOrdered[qtyOrdered] = null;
+                        qtyOrdered--;
                         System.out.println("Disc has been removed");
                         break;
                     }
