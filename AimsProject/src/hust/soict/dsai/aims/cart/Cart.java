@@ -1,4 +1,6 @@
-package Lab02;
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
     private int qtyOrdered = 0;

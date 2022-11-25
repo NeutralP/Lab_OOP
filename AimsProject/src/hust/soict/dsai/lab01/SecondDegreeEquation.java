@@ -1,9 +1,9 @@
-package Lab01;
+package hust.soict.dsai.lab01;
 /*
     Exercise 2.2.6 part 3
  */
+
 import javax.swing.*;
-import java.lang.Math;
 
 public class SecondDegreeEquation {
     public static void main(String[] args) {

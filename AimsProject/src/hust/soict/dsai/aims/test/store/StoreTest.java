@@ -1,6 +1,7 @@
-package Lab03;
+package hust.soict.dsai.aims.test.store;
 
-import Lab02.DigitalVideoDisc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
     public static void main(String[] args) {

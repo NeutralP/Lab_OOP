@@ -1,4 +1,4 @@
-package Lab01;
+package hust.soict.dsai.lab01;
 /*
     Exercise 6.5
     Array is a constant

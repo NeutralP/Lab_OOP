@@ -1,4 +1,4 @@
-package Lab01;
+package hust.soict.dsai.lab01;
 
 public class AddMatrix {
     public static void main(String[] args) {
