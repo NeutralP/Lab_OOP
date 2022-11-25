@@ -1,6 +1,6 @@
-package Lab03;
+package hust.soict.dsai.aims.store;
 
-import Lab02.DigitalVideoDisc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Store {
     public DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBER_DISK];

@@ -1,4 +1,4 @@
-package Lab01;
+package hust.soict.dsai.lab01;
 /*
     Exercise 2.2.6 part 2
  */
