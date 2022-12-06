@@ -1,6 +1,6 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Store {
     public DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBER_DISK];
