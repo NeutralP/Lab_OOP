@@ -49,4 +49,8 @@ public abstract class Media {
         this.title = title;
         this.category = category;
     }
+
+    public Media(String title) {
+        this.title = title;
+    }
 }
