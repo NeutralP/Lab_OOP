@@ -6,6 +6,7 @@ public abstract class Media {
     private String category;
     private float cost;
 
+
     public int getId() {
         return id;
     }
@@ -36,5 +37,16 @@ public abstract class Media {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    public Media(int id, String title, String category, float cost) {
+        this.id = id;
+        this.title = title;
+        this.category = category;
+    }
+
+    public Media(String title, String category) {
+        this.title = title;
+        this.category = category;
     }
 }
