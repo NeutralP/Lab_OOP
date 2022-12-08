@@ -46,20 +46,10 @@ public class DigitalVideoDisc extends Media implements Playable {
         this.setId(nbDigitalVideoDiscs++);
     }
 
+
     /**
-     * If the title of the book is the same as the title passed in, return true, otherwise return false.
-     *
-     * @param title The title of the book
-     * @return A boolean value.
+     * This function prints out the title and length of the DVD.
      */
-    public boolean isMatch(String title) {
-        return title.compareToIgnoreCase(this.getTitle()) == 0;
-    }
-
-    public boolean isMatchid(int id) {
-        return id == this.getId();
-    }
-
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());

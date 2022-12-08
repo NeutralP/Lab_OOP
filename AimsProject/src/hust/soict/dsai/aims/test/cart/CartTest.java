@@ -2,6 +2,7 @@ package hust.soict.dsai.aims.test.cart;
 
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
 
 public class CartTest {
     public static void main(String[] args) {
@@ -9,15 +10,31 @@ public class CartTest {
         Cart cart = new Cart();
 
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-        cart.addDigitalVideoDisc(dvd1);
+        cart.addMedia(dvd1);
 
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
-        cart.addDigitalVideoDisc(dvd2);
+        cart.addMedia(dvd2);
 
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
-        cart.addDigitalVideoDisc(dvd3);
+        cart.addMedia(dvd3);
+
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
 
         // Test the print method
+        System.out.print("\n\n");
+        System.out.println("TEST PRINT/ADD FUNCTION");
+        cart.print();
+
+        // Test different add function
+        System.out.print("\n\n");
+        Media[] mediaList = new Media[] {dvd1, dvd3};
+        cart.addMedia(mediaList);
+        System.out.println("TEST ANOTHER ADD FUNCTION");
+        cart.print();
+
+        // Test the remove method
+        System.out.print("\n\n");
+        cart.removeMedia(dvd4);
         cart.print();
 
         // To-do: Test the search methods here, should return 1 3

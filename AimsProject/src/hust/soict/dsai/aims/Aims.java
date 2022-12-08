@@ -10,16 +10,16 @@ public class Aims {
 
         // Create new dvd objects and add them to the cart
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("TENET", "Thriller", "Christopher Nolan", 129, 19.92f);
-        anOrder.addDigitalVideoDisc(dvd1);
+        anOrder.addMedia(dvd1);
 
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Dune", "Sci-fi", "Villeanuve", 150, 20.05f);
-        anOrder.addDigitalVideoDisc(dvd2);
+        anOrder.addMedia(dvd2);
 
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Back To the Future", "Scifi", "Dunno", 120, 20);
-        anOrder.addDigitalVideoDisc(dvd3);
+        anOrder.addMedia(dvd3);
 
         System.out.println("The total cost is: ");
-        System.out.println(String.format("%.2f", anOrder.cost()));
+        System.out.printf("%.2f%n", anOrder.cost());
 //        anOrder.displayCart();
 
 //        anOrder.removeDigitalVideoDisc(dvd1);

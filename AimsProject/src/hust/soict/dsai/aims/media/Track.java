@@ -17,6 +17,9 @@ public class Track implements Playable{
         return length;
     }
 
+    /**
+     * This function prints out the title and length of the DVD.
+     */
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
