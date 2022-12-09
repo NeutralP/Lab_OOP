@@ -2,13 +2,15 @@ package hust.soict.dsai.aims.cart;
 import hust.soict.dsai.aims.media.Media;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 
 public class Cart {
 //    private int qtyOrdered = 0;
     private static final int MAX_NUMBER_ORDERED = 20;
 //    private DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
-    private ArrayList<Media> itemsOrdered = new ArrayList<>();
+    private List<Media> itemsOrdered = new ArrayList<>();
+
 //    public int getQtyOrdered() {
 //        return qtyOrdered;
 //    }
@@ -90,6 +92,10 @@ public class Cart {
         if (tmp == 0) System.out.println("Media not found within the order");
     }
 
+    public List<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
+
     /**
      * This function returns the total cost of the order.
      *
@@ -111,7 +117,7 @@ public class Cart {
         System.out.println("/////////////");
         System.out.println("Ordered Items:");
         for (Media items : itemsOrdered) {
-            System.out.printf(items.toString());
+            System.out.println(items.toString());
         }
         System.out.printf("\nTotal cost: " + cost());
         System.out.println();

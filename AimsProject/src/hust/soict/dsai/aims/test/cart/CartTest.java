@@ -3,13 +3,17 @@ package hust.soict.dsai.aims.test.cart;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
+import hust.soict.dsai.aims.media.MediaComparatorByCostTitle;
+
+import java.util.Collections;
+import java.util.Comparator;
 
 public class CartTest {
     public static void main(String[] args) {
         // Creating a new instance of the Cart class.
         Cart cart = new Cart();
 
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 24.95f);
         cart.addMedia(dvd1);
         cart.addMedia(dvd1);
 
@@ -28,15 +32,19 @@ public class CartTest {
 
         // Test different add function
         System.out.print("\n\n");
-        Media[] mediaList = new Media[] {dvd1, dvd3};
-        cart.addMedia(mediaList);
+//        Media[] mediaList = new Media[] {dvd1, dvd3};
+//        cart.addMedia(mediaList);
         System.out.println("TEST ANOTHER ADD FUNCTION");
         cart.print();
 
-        // Test the remove method
-        System.out.print("\n\n");
-        cart.removeMedia(dvd4);
+        Comparator<Media> com = new MediaComparatorByCostTitle();
+        Collections.sort(cart.getItemsOrdered(),Media.COMPARE_BY_COST_TITLE);
         cart.print();
+
+//        // Test the remove method
+//        System.out.print("\n\n");
+//        cart.removeMedia(dvd4);
+//        cart.print();
 
         // To-do: Test the search methods here, should return 1 3
         if (cart.SearchByID(2))

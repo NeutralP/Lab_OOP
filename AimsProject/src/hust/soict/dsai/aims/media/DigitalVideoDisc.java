@@ -23,14 +23,24 @@ public class DigitalVideoDisc extends Media implements Playable {
     }
 
 
+    @Override
+    public String toString() {
+        return "DigitalVideoDisc{" +
+                "director='" + director + '\'' +
+                ", length=" + length +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                '}';
+    }
+
     /**
      * The toString() method returns a string representation of the object
      *
      * @return The id, title, category, director, length, and cost of the DVD.
      */
-    public String toString() {
-        return (this.getId() + 1) + ". DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.director + " - " + this.length + " - " + this.getCost() + "\n";
-    }
+
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
         super(title, category);

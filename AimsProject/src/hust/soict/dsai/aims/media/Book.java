@@ -44,4 +44,15 @@ public class Book extends Media {
         super(id, title, category, cost);
         this.authors = authors;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "authors=" + authors +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                '}';
+    }
 }
