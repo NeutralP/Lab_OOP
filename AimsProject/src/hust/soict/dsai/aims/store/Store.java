@@ -80,4 +80,17 @@ public class Store {
         }
         System.out.println("/////////////");
     }
+
+    public void removeMedia(String searchid) {
+        if (itemsInStore.isEmpty()) System.out.println("The store is empty, there are no disks to be removed");
+        else {
+            for (Media media : itemsInStore) {
+                if (media.getTitle().compareToIgnoreCase(searchid) == 0) {
+                    itemsInStore.remove(media);
+                    System.out.println("Media " + searchid + " has been removed");
+                    break;
+                }
+            }
+        }
+    }
 }
