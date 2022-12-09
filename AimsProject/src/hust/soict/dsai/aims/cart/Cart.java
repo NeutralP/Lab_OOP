@@ -33,6 +33,10 @@ public class Cart {
      */
     public void addMedia(Media e) {
         if (itemsOrdered.size() < MAX_NUMBER_ORDERED) {
+            if (itemsOrdered.contains(e)) {
+                System.out.println("Item is already in cart");
+                return;
+            }
             itemsOrdered.add(e);
             System.out.println("The media " + e.getTitle() + " has been added");
             if (itemsOrdered.size() == MAX_NUMBER_ORDERED) System.out.println("The cart is full, you can't add any more items!");

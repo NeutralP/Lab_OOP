@@ -23,6 +23,10 @@ public class Store {
         if (itemsInStore.size() >= MAX_NUMBER_DISK)
             System.out.println("Store is full");
         else {
+            if (itemsInStore.contains(newMedia)) {
+                System.out.println("Media is already in shop");
+                return;
+            }
             itemsInStore.add(newMedia);
             System.out.println("Media " + newMedia.getTitle() + " has been added");
             if (itemsInStore.size() == MAX_NUMBER_DISK) // Warning if store has reached max number of media
